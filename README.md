@@ -6,4 +6,4 @@ Folder that initialize a standard Ruby project
 
 1 - Put your necessary Gem into the Gemfile  
 2 - Initialize your Gem with <code>$ bundle install</code>  
-3 - Uncomment .env in the .gitignore in order to avoid pushing your API keys on GitHub
+3 - If necessary, create a .env file on the root folder and put your API keys inside
