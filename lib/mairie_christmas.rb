@@ -18,13 +18,13 @@ def get_ville
   return ville_name_array = region_page.xpath("//a[contains(@class, 'lientxt')]/text()").map {|x| x.to_s.downcase.gsub(" ", "-") }
 end
 
-def get_email
+def get_email (ville_names)
 
   ville_email_array = []
 
-  for n in 0...get_ville.length
+  for n in 0...ville_names.length
 
-      page_url_ville = "https://www.annuaire-des-mairies.com/95/#{get_ville[n]}.html"
+      page_url_ville = "https://www.annuaire-des-mairies.com/95/#{ville_names[n]}.html"
 
       ville_page = Nokogiri::HTML(open(page_url_ville))
 
@@ -38,7 +38,7 @@ def get_email
   return ville_email_array
 end
 
-puts get_email
+puts email_ville_result = Hash[get_ville.zip(get_email(get_ville))]
 
 # # From the website, get an array of the currencies price and convert it to string
 # currency_value_array = page.xpath("//tr/td/a[contains(@class, 'price')]/text()").map {|x| x.to_s }
