@@ -34,7 +34,7 @@ def get_email (ville_names)
 
       rescue => e
 
-        ville_email_array << " " #résultat que tu veux voir en lieu et place d'une erreur terminal
+        ville_email_array << " "
 
       end
   end
