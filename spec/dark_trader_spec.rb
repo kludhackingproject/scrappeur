@@ -1,4 +1,4 @@
-require_relative '../lib/hello'
+require_relative '../lib/dark_trader'
 
 describe "the hello function" do
   it "says hello" do
