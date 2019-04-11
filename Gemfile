@@ -8,3 +8,5 @@ gem 'rspec'
 gem 'dotenv'
 # pry i used for debuging
 gem 'pry'
+
+gem 'nokogiri'
